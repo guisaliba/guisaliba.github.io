@@ -1,0 +1,8 @@
+# Pin the toolchain for this project.
+#
+# Ruby 3.3.4 is the exact version GitHub Pages builds with (see
+# https://pages.github.com/versions/). Using it locally keeps our dev
+# environment identical to production, so "works on my machine" means
+# "works on deploy".
+[tools]
+ruby = "3.3.4"

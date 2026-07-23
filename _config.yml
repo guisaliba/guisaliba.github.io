@@ -1,0 +1,50 @@
+# Site
+title: guisaliba
+author: Gui Saliba
+description: >-
+  My journey as a software engineer. Notes, posts, and things I learn along the way.
+
+# GitHub Pages user site (`guisaliba/guisaliba.github.io`).
+# A custom domain also serves from its root, so no path prefix is needed.
+baseurl: ""
+url: "https://guisaliba.github.io"
+
+# Theme (github-pages gem bundles minima; can leave default skin or override below)
+theme: minima
+minima:
+  skin: classic
+
+# Blog posts live below /blog/: /blog/2026/01/01/my-post/
+permalink: /blog/:year/:month/:day/:title/
+
+# Whitelisted plugins (auto-enabled by github-pages; listed for clarity).
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Markdown rendering
+markdown: kramdown
+
+# Per-post defaults: every post uses the `post` layout and a manual reading_time.
+# Set `reading_time: 5` and `tags: [foo, bar]` in each post's frontmatter.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      reading_time: 1
+      tags: []
+
+# Exclude build-only artifacts from the generated site.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - AGENTS.md
+  - vendor
+  - node_modules
+
+# Do not regenerate these via jekyll-feed etc.
+include:
+  - .htaccess

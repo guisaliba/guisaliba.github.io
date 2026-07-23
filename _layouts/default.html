@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- seo -%}
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    {%- feed_meta -%}
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="site-mark" href="{{ '/' | relative_url }}" aria-label="Guilherme Saliba, home">
+          <span class="site-mark-shape" aria-hidden="true"></span>
+        </a>
+        <div class="site-links">
+          <a href="{{ '/' | relative_url }}">home</a>
+          <a href="{{ '/blog/' | relative_url }}">writings</a>
+          <a href="{{ '/tags/' | relative_url }}">tags</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="site-main shell">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer shell">
+      Copyright &copy; 2026 Guilherme Saliba
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240" role="img" aria-label="Example diagram with the words saliba.dev">
+  <rect width="640" height="240" fill="#0f172a"/>
+  <rect x="40" y="40" width="560" height="160" rx="12" fill="#1e293b" stroke="#334155"/>
+  <text x="320" y="125" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="44" fill="#67e8f9" text-anchor="middle">saliba.dev</text>
+  <text x="320" y="165" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#94a3b8" text-anchor="middle">placeholder image</text>
+</svg>
