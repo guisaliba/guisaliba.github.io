@@ -9,7 +9,7 @@ This is the `v3` line — do not look at `src/`, `package.json`, or any Next.js 
 ## Commands
 
 - `bundle install` — first-time setup; installs the `github-pages` gem (pins the whole toolchain — jekyll 3.10, liquid 4.0.4, minima 2.5.1 — to match production).
-- `bundle exec jekyll serve` — local dev server. Site is served at `http://127.0.0.1:4000/portfolio/` **with the baseurl prefix** because `baseurl: "/portfolio"` in `_config.yml`. Forgetting the `/portfolio` prefix is the #1 reason "the page is blank locally."
+- `bundle exec jekyll serve` — local dev server at `http://127.0.0.1:4000/` (no path prefix; this is a GitHub Pages user site).
 - `bundle exec jekyll build` — full production build into `_site/`.
 - There is no lint, no test, no typecheck. Verification = does `bundle exec jekyll build` succeed and do the local pages render.
 
@@ -20,7 +20,7 @@ This is the `v3` line — do not look at `src/`, `package.json`, or any Next.js 
 
 ## Architecture notes
 
-- **`baseurl: "/portfolio"`** mirrors the GitHub Pages project URL (`guisaliba.github.io/portfolio`). If the repo is ever renamed to `guisaliba.github.io` (user/org site), set `baseurl: ""` and remove the `baseurl` prefix from any hand-written links. Almost every internal link should go through the `relative_url` Liquid filter (`{{ "/path/" | relative_url }}`) so it adapts automatically.
+- **`baseurl: ""`** is required because the repository is `guisaliba/guisaliba.github.io`, a GitHub Pages user site served from the domain root. Keep internal links behind the `relative_url` Liquid filter so a future custom domain works unchanged.
 - **`url: "https://guisaliba.github.io"`** — update to a custom domain if one is added later.
 
 ### Content model
@@ -37,7 +37,7 @@ This is the `v3` line — do not look at `src/`, `package.json`, or any Next.js 
 
 ### Layouts
 
-- `_layouts/default.html` owns the visible shell (avatar nav, Home/Writings/Tags links, centered copyright footer). `_layouts/home.html` owns the home-only profile hero + writing list. `_layouts/post.html` owns article metadata/content + prev/next nav. Only `_layouts/page.html` is inherited from minima.
+- `_layouts/default.html` owns the visible shell (avatar nav, Home/Writings/Tags links, centered copyright footer). `_layouts/home.html` owns the home-only profile hero + three recent writings. `blog/index.html` owns the complete `/blog/` archive. `_layouts/post.html` owns article metadata/content + prev/next nav. Only `_layouts/page.html` is inherited from minima.
 - Editable identity/social/song copy lives in `_data/profile.yml`; don't hardcode it into layouts. Social icons are inline SVG selected by `_includes/social-icon.html` — no icon-library dependency.
 - Styles are fully custom in `assets/main.scss`; minima is still the theme dependency but its SCSS is not imported. This file compiles to `/assets/main.css`. **Do not** move it to `assets/css/main.scss` because `_layouts/default.html` links `/assets/main.css`.
 - Iosevka 400/700 are vendored at `assets/fonts/` and loaded with `font-display: swap`. The avatar/favicon is `assets/images/avatar.png`.
@@ -51,7 +51,7 @@ This is the `v3` line — do not look at `src/`, `package.json`, or any Next.js 
 
 ## Conventions
 
-- Permalinks: `permalink: /:year/:month/:day/:title/` (post URLs are `/portfolio/2026/07/22/my-post/`). Don't switch to pretty/slug-only without also handling redirects.
+- Permalinks: `permalink: /blog/:year/:month/:day/:title/` (for example `/blog/2026/07/22/my-post/`). Don't switch to slug-only without also handling redirects.
 - `_config.yml` excludes `Gemfile`, `Gemfile.lock`, `README.md`, `AGENTS.md`, `vendor` from the build output. Keep these excluded.
 - `Gemfile.lock` is gitignored (GitHub Pages builds with its own pinned `github-pages` version regardless; the lock only matters for local dev and tends to diverge across Ruby versions). Do not commit it.
 - Use the `github-pages` gem, not bare `jekyll` — it pins the exact versions GH Pages uses, so "works locally" means "works on deploy."
@@ -64,5 +64,5 @@ This is the `v3` line — do not look at `src/`, `package.json`, or any Next.js 
 ## Gotchas
 
 - **Future-dated posts don't render by default.** If a post's front matter `date` is later than the build date, it's skipped unless `future: true` is set in `_config.yml`. Sample posts here are dated around the build time intentionally.
-- **`baseurl` everywhere.** Linking to `/tags/` directly will 404 on a project-page site; always use `relative_url`.
+- Even with an empty `baseurl`, keep using `relative_url` for internal links so custom-domain and future hosting changes remain safe.
 - Wiping `main`/`v1`/`v2` to "clean up" would destroy the user's nostalgia history — leave those branches alone.

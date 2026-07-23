@@ -1,24 +1,49 @@
-# portfolio
+# guisaliba.github.io
 
 Static personal blog built with [Jekyll](https://jekyllrb.com) + the
 [`minima`](https://github.com/jekyll/minima) theme, published via [GitHub
 Pages](https://pages.github.com). This is the `v3` line of the repository; the
 `main`, `v1`, and `v2` branches are kept as history.
 
-## Run locally
+## Preview locally
+
+### First-time setup
+
+Run these commands from the repository root:
 
 ```bash
-mise install           # installs Ruby 3.3.4 (matches GitHub Pages' build Ruby)
-bundle install          # first time only
-bundle exec jekyll serve
-# open http://127.0.0.1:4000/portfolio/
+mise install
+mise exec -- bundle install
 ```
 
-Ruby is pinned via [mise](https://mise.jdx.dev) in `.mise.toml` to **3.3.4**,
-the exact version GitHub Pages builds with (see
-<https://pages.github.com/versions/>). The dev server runs from the repo
-root; the site is served at `/portfolio/` because `baseurl: "/portfolio"`
-mirrors the GitHub Pages project URL (`https://guisaliba.github.io/portfolio/`).
+`mise install` installs Ruby 3.3.4, the exact version GitHub Pages builds
+with. `bundle install` then installs Jekyll, minima, and the other gems pinned
+by the `github-pages` gem.
+
+### Start the website
+
+```bash
+mise exec -- bundle exec jekyll serve
+```
+
+Open **<http://127.0.0.1:4000/>** in your browser. Keep the command
+running while you work: Jekyll watches the source files and rebuilds the site
+when they change. Refresh the browser to see the latest build. Press `Ctrl+C`
+in the terminal to stop the server.
+
+The repository is named `guisaliba.github.io`, so GitHub Pages treats it as a
+user site and serves it from the domain root. `_config.yml` therefore uses an
+empty `baseurl`.
+
+### Build without starting a server
+
+```bash
+mise exec -- bundle exec jekyll build
+```
+
+This generates the production-ready static files in `_site/`, but does not
+start a website you can visit. Use `jekyll serve` when you want to visualize
+the site locally.
 
 ## Write a post
 
@@ -37,6 +62,9 @@ mirrors the GitHub Pages project URL (`https://guisaliba.github.io/portfolio/`).
 
 3. Body is Markdown. Drop images in `assets/images/` and reference them with
    `{{ "/assets/images/x.png" | relative_url }}`.
+
+Posts are generated below `/blog/YYYY/MM/DD/title/`. The complete archive is
+at `/blog/`; the homepage shows the three latest posts.
 
 ## Tags
 
@@ -57,7 +85,7 @@ param + JS instead.)
 
 ## Deploy
 
-Push `v3` (or `main`, once merged) to GitHub and enable Pages in the repo
+Push `v3` (or `main`, once merged) to `guisaliba/guisaliba.github.io` and enable Pages in the repo
 settings: **Settings → Pages → Build from branch → v3 / `(root)`**. GitHub
 runs `jekyll build` server-side using its own pinned `github-pages` toolchain
 (same versions our `Gemfile` + `.mise.toml` pin locally), so a passing local
