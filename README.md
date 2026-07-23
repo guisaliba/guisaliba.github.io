@@ -57,11 +57,17 @@ the site locally.
    reading_time: 5      # minutes, set manually
    tags: [ruby, jekyll]
    description: "Optional SEO description."
+   cover_image: /assets/images/covers/my-post.svg
    ---
    ```
 
 3. Body is Markdown. Drop images in `assets/images/` and reference them with
    `{{ "/assets/images/x.png" | relative_url }}`.
+
+`cover_image` is required for every post because the home, blog, and tag lists
+render it as a square thumbnail. Cover files live in `assets/images/covers/`;
+the thumbnail uses a centered `object-fit: cover` crop, so landscape images
+work without creating a second thumbnail file.
 
 Posts are generated below `/blog/YYYY/MM/DD/title/`. The complete archive is
 at `/blog/`; the homepage shows the three latest posts.
@@ -78,8 +84,8 @@ param + JS instead.)
 
 - Edit the name, traits, writing subjects, introduction, current song, and
   social links in `_data/profile.yml`.
-- The avatar used in the navigation and as the favicon is
-  `assets/images/avatar.png`.
+- The temporary navigation mark is an off-white CSS square in
+  `assets/main.scss`; its matching browser icon is `assets/images/favicon.svg`.
 - The custom off-white/Geist design lives in `assets/main.scss`; local font
   files are under `assets/fonts/`.
 

@@ -32,15 +32,17 @@ This is the `v3` line — do not look at `src/`, `package.json`, or any Next.js 
   - `reading_time` (int, **minutes, set manually** — no auto-calculation)
   - `tags` (YAML list, e.g. `tags: [ruby, jekyll]`)
   - `description` (optional, used for SEO meta)
+  - `cover_image` (**required**, root-relative asset path; every writing list renders it as a square crop)
 - Defaults: `_config.yml` sets `layout: post`, `reading_time: 1`, `tags: []` for everything under `_posts/`, so a post with no front matter still builds.
 - Images: place files in `assets/images/` and reference with `{{ "/assets/images/NAME" | relative_url }}`. Raw binary files without front matter are copied straight through; **do not** add front matter to image files (it turns them into treated pages and breaks them).
 
 ### Layouts
 
-- `_layouts/default.html` owns the visible shell (avatar nav, Home/Writings/Tags links, centered copyright footer). `_layouts/home.html` owns the home-only profile hero + three recent writings. `blog/index.html` owns the complete `/blog/` archive. `_layouts/post.html` owns article metadata/content + prev/next nav. Only `_layouts/page.html` is inherited from minima.
+- `_layouts/default.html` owns the visible shell (square mark nav, Home/Writings/Tags links, centered copyright footer). `_layouts/home.html` owns the home-only profile hero + three recent writings. `blog/index.html` owns the complete `/blog/` archive. `_layouts/post.html` owns article metadata/content + prev/next nav. Only `_layouts/page.html` is inherited from minima.
 - Editable identity/social/song copy lives in `_data/profile.yml`; don't hardcode it into layouts. Social icons are inline SVG selected by `_includes/social-icon.html` — no icon-library dependency.
 - Styles are fully custom in `assets/main.scss`; minima is still the theme dependency but its SCSS is not imported. This file compiles to `/assets/main.css`. **Do not** move it to `assets/css/main.scss` because `_layouts/default.html` links `/assets/main.css`.
-- Geist 400/700 are vendored at `assets/fonts/` and loaded with `font-display: swap`. The avatar/favicon is `assets/images/avatar.png`.
+- Geist 400/700 are vendored at `assets/fonts/` and loaded with `font-display: swap`. The temporary nav mark is CSS; its matching favicon is `assets/images/favicon.svg`.
+- Post covers live in `assets/images/covers/`. Writing lists render `post.cover_image` at the right as a fixed square with `object-fit: cover`; do not manually create thumbnail variants.
 
 ### Tags page (the only "dynamic" part)
 
