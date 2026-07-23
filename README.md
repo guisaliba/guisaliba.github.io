@@ -46,6 +46,15 @@ filters the post list client-side. (Per-tag route pages would require a
 plugin that GitHub Pages doesn't whitelist, so we filter with a query
 param + JS instead.)
 
+## Personal details and styles
+
+- Edit the name, traits, writing subjects, introduction, current song, and
+  social links in `_data/profile.yml`.
+- The avatar used in the navigation and as the favicon is
+  `assets/images/avatar.png`.
+- The custom off-white/Iosevka design lives in `assets/main.scss`; local font
+  files are under `assets/fonts/`.
+
 ## Deploy
 
 Push `v3` (or `main`, once merged) to GitHub and enable Pages in the repo
