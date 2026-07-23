@@ -1,0 +1,35 @@
+name: Guilherme Saliba
+flag: "🇧🇷"
+age: 24
+traits:
+  - software engineer
+  - FOSS lover
+  - retired streamer
+topics:
+  - software
+  - LLMs
+  - open source
+intro: >-
+  I build software, care deeply about open source, and enjoy understanding how
+  tools work beneath the surface. This is where I write down what I learn,
+  what I am exploring, and the occasional thought worth keeping.
+song:
+  artist: Olivia Rodrigo
+  title: honeybee
+  url: https://open.spotify.com/user/12142578906?si=36626fda52de446b
+socials:
+  - name: GitHub
+    icon: github
+    url: https://github.com/guisaliba
+  - name: LinkedIn
+    icon: linkedin
+    url: https://www.linkedin.com/in/guisaliba
+  - name: Email
+    icon: email
+    url: mailto:salibagui19@gmail.com
+  - name: Twitch
+    icon: twitch
+    url: https://twitch.tv/salibaa
+  - name: Spotify
+    icon: spotify
+    url: https://open.spotify.com/user/12142578906?si=36626fda52de446b
