@@ -80,7 +80,7 @@ param + JS instead.)
   social links in `_data/profile.yml`.
 - The avatar used in the navigation and as the favicon is
   `assets/images/avatar.png`.
-- The custom off-white/Iosevka design lives in `assets/main.scss`; local font
+- The custom off-white/Geist design lives in `assets/main.scss`; local font
   files are under `assets/fonts/`.
 
 ## Deploy

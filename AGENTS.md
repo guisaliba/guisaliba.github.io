@@ -40,7 +40,7 @@ This is the `v3` line — do not look at `src/`, `package.json`, or any Next.js 
 - `_layouts/default.html` owns the visible shell (avatar nav, Home/Writings/Tags links, centered copyright footer). `_layouts/home.html` owns the home-only profile hero + three recent writings. `blog/index.html` owns the complete `/blog/` archive. `_layouts/post.html` owns article metadata/content + prev/next nav. Only `_layouts/page.html` is inherited from minima.
 - Editable identity/social/song copy lives in `_data/profile.yml`; don't hardcode it into layouts. Social icons are inline SVG selected by `_includes/social-icon.html` — no icon-library dependency.
 - Styles are fully custom in `assets/main.scss`; minima is still the theme dependency but its SCSS is not imported. This file compiles to `/assets/main.css`. **Do not** move it to `assets/css/main.scss` because `_layouts/default.html` links `/assets/main.css`.
-- Iosevka 400/700 are vendored at `assets/fonts/` and loaded with `font-display: swap`. The avatar/favicon is `assets/images/avatar.png`.
+- Geist 400/700 are vendored at `assets/fonts/` and loaded with `font-display: swap`. The avatar/favicon is `assets/images/avatar.png`.
 
 ### Tags page (the only "dynamic" part)
 
