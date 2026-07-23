@@ -85,20 +85,20 @@ img {
 }
 
 .site-mark {
-  display: inline-flex;
+  display: grid;
   flex: 0 0 auto;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: #fff;
-  overflow: hidden;
+  width: 42px;
+  height: 42px;
+  place-items: center;
   text-decoration: none;
 }
 
-.site-mark img {
+.site-mark-shape {
   display: block;
-  width: 42px;
-  height: 42px;
-  object-fit: cover;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
 }
 
 .site-links {
@@ -288,7 +288,35 @@ img {
 }
 
 .writing-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 124px;
+  align-items: center;
+  gap: 28px;
   padding: 24px 3px 23px;
+}
+
+.writing-card__body {
+  min-width: 0;
+}
+
+.writing-cover {
+  display: block;
+  width: 124px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--soft);
+}
+
+.writing-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.writing-cover:hover img {
+  transform: scale(1.035);
 }
 
 .writing-card h2,
@@ -367,6 +395,11 @@ img {
   color: var(--faint);
   font-size: 0.72rem;
   line-height: 1.4;
+}
+
+.writing-card .post-meta {
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .post-meta > span:not(.post-header-tags)::before {
@@ -558,7 +591,13 @@ blockquote {
   }
 
   .writing-card {
+    grid-template-columns: minmax(0, 1fr) 88px;
+    gap: 16px;
     padding-block: 20px;
+  }
+
+  .writing-cover {
+    width: 88px;
   }
 
   .post-header {

@@ -4,6 +4,7 @@ date: 2026-07-15
 reading_time: 1
 tags: [meta, writing]
 description: "How images and code blocks look in a Jekyll post."
+cover_image: /assets/images/covers/writing-posts-with-images.svg
 ---
 
 A quick demo of common Markdown bits.

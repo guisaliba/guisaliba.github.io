@@ -4,6 +4,7 @@ date: 2026-07-22
 reading_time: 2
 tags: [meta, jekyll]
 description: "A short note on how this blog is set up with Jekyll and GitHub Pages."
+cover_image: /assets/images/covers/welcome-to-the-new-site.svg
 ---
 
 This is the first post on the rebuilt static site. It's a Jekyll blog hosted on

@@ -47,21 +47,22 @@ permalink: /tags/
     {%- endcapture -%}
     <li data-tags="{{ post_tags }}">
       <article class="writing-card">
-        <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-        {%- if post.description -%}
-          <p class="writing-summary">{{ post.description }}</p>
-        {%- endif -%}
-      {%- if post.tags.size > 0 -%}
-        <div class="post-tags" aria-label="Tags">
-          {%- for tag in post.tags -%}
-            <a class="post-tag" href="{{ '/tags/' | relative_url }}?tag={{ tag | cgi_escape }}">{{ tag }}</a>
-          {%- endfor -%}
+        <div class="writing-card__body">
+          <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+          {%- if post.description -%}<p class="writing-summary">{{ post.description }}</p>{%- endif -%}
+          {%- if post.tags.size > 0 -%}
+            <div class="post-tags" aria-label="Tags">
+              {%- for tag in post.tags -%}<a class="post-tag" href="{{ '/tags/' | relative_url }}?tag={{ tag | cgi_escape }}">{{ tag }}</a>{%- endfor -%}
+            </div>
+          {%- endif -%}
+          <p class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+            {%- if post.reading_time -%}<span>{{ post.reading_time }} min read</span>{%- endif -%}
+          </p>
         </div>
-      {%- endif -%}
-        <p class="post-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
-          {%- if post.reading_time -%}<span>{{ post.reading_time }} min read</span>{%- endif -%}
-        </p>
+        <a class="writing-cover" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title | escape }}">
+          <img src="{{ post.cover_image | relative_url }}" alt="" loading="lazy">
+        </a>
       </article>
     </li>
   {%- endfor -%}

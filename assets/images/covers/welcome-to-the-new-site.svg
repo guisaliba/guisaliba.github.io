@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Abstract grid cover for Welcome to the new site">
+  <rect width="1200" height="800" fill="#e9e5dc"/>
+  <g fill="none" stroke="#1b1b19" stroke-width="8">
+    <rect x="110" y="100" width="980" height="600"/>
+    <path d="M110 300h980M110 500h980M355 100v600M600 100v600M845 100v600"/>
+  </g>
+  <rect x="355" y="300" width="490" height="200" fill="#1b1b19"/>
+  <circle cx="600" cy="400" r="62" fill="#e9e5dc"/>
+</svg>
