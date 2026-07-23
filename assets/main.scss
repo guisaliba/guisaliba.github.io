@@ -1,0 +1,80 @@
+---
+---
+
+// Pull in all of minima's default styles, then layer our overrides on top.
+// (minima's own assets/main.scss ships as the theme gem; overriding here
+//  lets us append custom CSS without touching the gem.)
+@import "minima";
+
+/* ---- overrides ---- */
+
+.post-tag {
+  font-size: 0.85em;
+  text-decoration: none;
+}
+
+.post-tags {
+  margin-top: -0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.tag-browser-hint {
+  margin: 1rem 0 2rem;
+}
+
+.tag-index__filters {
+  margin-bottom: 1.5rem;
+}
+
+.tag-index__filter {
+  display: inline-block;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+
+.tag-index__filter:hover,
+.tag-index__filter.is-active {
+  background: #eee;
+}
+
+.tag-index__results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-index__results li {
+  margin-bottom: 1rem;
+}
+
+.tag-index__results .post-meta {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.tag-index__no-results {
+  display: none;
+  margin-top: 1rem;
+  font-style: italic;
+  color: #888;
+}
+
+.tag-index__no-results.is-visible {
+  display: block;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.post-nav-link {
+  text-decoration: none;
+}
