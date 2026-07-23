@@ -284,6 +284,7 @@ img {
   padding: 24px 3px 23px;
 }
 
+.writing-card h2,
 .writing-card h3,
 .tag-index__results h3 {
   margin: 0;
@@ -291,6 +292,26 @@ img {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.45;
+}
+
+.archive-heading {
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.archive-heading h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.archive-heading p {
+  max-width: 620px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 .post-link {
@@ -531,6 +552,11 @@ blockquote {
 
   .post-header {
     margin-bottom: 38px;
+  }
+
+  .archive-heading {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .post-header-meta {

@@ -41,11 +41,11 @@ layout: default
 
   <section class="writings" id="writings" aria-labelledby="writings-title">
     <div class="section-heading">
-      <h2 id="writings-title">Writings</h2>
-      <a href="{{ '/tags/' | relative_url }}">browse by tag</a>
+      <h2 id="writings-title">Recent writings</h2>
+      <a href="{{ '/blog/' | relative_url }}">view all</a>
     </div>
     <ul class="post-list">
-    {%- for post in site.posts -%}
+    {%- for post in site.posts limit: 3 -%}
     <li data-tags="{% for t in post.tags %}{{ t }}{% unless forloop.last %},{% endunless %}{% endfor %}">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <article class="writing-card">
