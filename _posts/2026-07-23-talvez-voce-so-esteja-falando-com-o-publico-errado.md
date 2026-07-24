@@ -12,7 +12,7 @@ cover_image: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audi
 
 ![Arte de capa]({{ "/assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png" | relative_url }})
 
-## Este pensamento não me deixou dormir esta noite
+## Não consegui dormir essa noite pensando nisso
 
 Já me vi em situações assim mais vezes do que consigo contar. Você está falando sobre algo de que realmente gosta, algo que vem construindo, aprendendo, lendo ou simplesmente pensando a respeito.
 
@@ -65,7 +65,7 @@ Para cada conversa que parece fora de lugar, provavelmente existe outro lugar on
 Talvez seja isso que realmente significa encontrar o seu público.
 Não encontrar pessoas que concordem com você. Não encontrar pessoas que admirem você. Apenas encontrar pessoas que gostam de ter o mesmo tipo de conversa que você.
 
-## Por que foi aqui que decidi começar a escrever
+## Por que decidi criar esse site e começar a escrever nele
 
 Não porque eu ache que tenho coisas extraordinárias a dizer e, certamente, não porque espere que todos se importem com as coisas que me interessam. Na verdade, é justamente o contrário. Aprendi que esperar que toda conversa encontre sentido para todo mundo é uma das formas mais rápidas de se decepcionar.
 

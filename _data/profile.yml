@@ -8,10 +8,10 @@ content:
       - FOSS lover
     topics:
       - software
-      - LLMs
       - open source
       - computer science
       - self-awareness
+      - AI
     intro: >-
       I'm a backend developer, undergraduate student, living in <a href="https://en.wikipedia.org/wiki/Belo_Horizonte" target="_blank" rel="noopener noreferrer">Belo Horizonte, Minas Gerais</a>.
       Working mostly with .NET and Node.js, but I also have a strong background in Python and Go.
@@ -32,13 +32,14 @@ content:
   pt-BR:
     traits:
       - desenvolvedor de software
-      - fã de código aberto
+      - escritor iniciante
+      - entusiasta de código aberto
     topics:
       - software
-      - LLMs
       - código aberto
-      - ciência da computação
+      - computação
       - autoconhecimento
+      - IA
     intro: >-
       Sou desenvolvedor backend, estudante em graduação e morando em <a href="https://pt.wikipedia.org/wiki/Belo_Horizonte" target="_blank" rel="noopener noreferrer">Belo Horizonte, MG</a>.
       Trabalho principalmente com .NET e Node.js, mas já tive que resolver umas buchas com Python e Go também.
@@ -48,7 +49,7 @@ content:
 
       Amo software de código aberto e tento contribuir sempre que posso. Sou membro e contribuidor ativo da
       <a href="https://heartdevs.com" target="_blank" rel="noopener noreferrer">He4rt Devs</a>,
-      a maior comunidade brasileira de desenvolvedores. 100% aberta e gratuita!
+      a maior comunidade de tecnologia open source do Brasil.
 
       <br>
       <br>
