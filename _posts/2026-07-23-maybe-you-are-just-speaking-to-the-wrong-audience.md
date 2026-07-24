@@ -41,9 +41,7 @@ Curiosity has always spread that way: from one enthusiastic person to another.
 
 That's why it always feels like a small loss when those conversations are interrupted before they have the chance to become something else.
 
-Not because every conversation would have become meaningful. Most wouldn't.
-
-But some would have, and we'll never know which ones. That's why it always feels like a small loss when those conversations are interrupted before they have the chance to become something else.
+Not because every conversation would have become meaningful. Most wouldn't. But some would have, and we'll never know which ones.
 
 That's probably the part that took me the longest to understand.
 
