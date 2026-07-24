@@ -13,7 +13,9 @@ cover_image: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audi
 
 I've found myself in situations like this more times than I can count. You're talking about something you genuinely enjoy, something you've been building, learning, reading about, or simply thinking about.
 
-And somewhere along the way, someone tells you to stop. Sometimes they say it jokingly, sometimes directly, sometimes they simply make it obvious that they'd rather be talking about something else.
+And somewhere along the way, someone makes you feel like you should stop.
+
+Sometimes they say it, even jokingly, sometimes directly, sometimes they simply make it obvious that they'd rather be talking about something else.
 
 After it happens enough times, you stop being surprised by it.
 
@@ -82,4 +84,4 @@ So if you happen to enjoy these kinds of conversations whether they're about sof
 
 Perhaps this isn't just where I decided to start writing.
 
-**Perhaps it's where we were meant to meet.**
+Perhaps it's where we were meant to meet.
