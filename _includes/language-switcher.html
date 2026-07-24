@@ -1,0 +1,18 @@
+{%- assign current_lang = page.lang | default: "en" -%}
+{%- assign all_documents = site.pages | concat: site.posts -%}
+{%- assign translations = all_documents | where: "translation_key", page.translation_key -%}
+{%- assign english_page = translations | where: "lang", "en" | first -%}
+{%- assign portuguese_page = translations | where: "lang", "pt-BR" | first -%}
+{%- assign english_url = english_page.url | default: "/" -%}
+{%- assign portuguese_url = portuguese_page.url | default: "/pt-br/" -%}
+<div class="language-switcher" aria-label="Language / Idioma">
+  {%- if current_lang == "pt-BR" -%}
+    <a href="{{ english_url | relative_url }}" lang="en" hreflang="en">EN</a>
+    <span aria-hidden="true">/</span>
+    <span class="is-active" aria-current="page">PT-BR</span>
+  {%- else -%}
+    <span class="is-active" aria-current="page">EN</span>
+    <span aria-hidden="true">/</span>
+    <a href="{{ portuguese_url | relative_url }}" lang="pt-BR" hreflang="pt-BR">PT-BR</a>
+  {%- endif -%}
+</div>

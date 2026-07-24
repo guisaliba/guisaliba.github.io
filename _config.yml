@@ -3,6 +3,7 @@ title: guisaliba
 author: Gui Saliba
 description: >-
   My journey as a software engineer. Notes, posts, and things I learn along the way.
+lang: en
 
 # GitHub Pages user site (`guisaliba/guisaliba.github.io`).
 # A custom domain also serves from its root, so no path prefix is needed.
@@ -19,7 +20,6 @@ permalink: /blog/:year/:month/:day/:title/
 
 # Whitelisted plugins (auto-enabled by github-pages; listed for clarity).
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
 
 # Markdown rendering
@@ -33,6 +33,7 @@ defaults:
       type: posts
     values:
       layout: post
+      lang: en
       reading_time: 1
       tags: []
 

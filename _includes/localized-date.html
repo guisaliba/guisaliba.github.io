@@ -1,0 +1,5 @@
+{%- assign lang = include.lang | default: "en" -%}
+{%- assign strings = site.data.i18n[lang] -%}
+{%- assign month_index = include.date | date: "%-m" | minus: 1 -%}
+{%- assign month = strings.date.months[month_index] -%}
+{{- include.date | date: "%-d" }} {{ month }} {{ include.date | date: "%Y" -}}

@@ -108,6 +108,7 @@ body {
 .post-content h4,
 .post-meta,
 .site-links,
+.language-switcher,
 .section-heading > a,
 .post-nav {
 	font-family: "Lora", Georgia, serif;
@@ -135,6 +136,7 @@ a:hover {
 }
 
 .site-links a,
+.language-switcher a,
 .section-heading > a,
 .post-nav a {
 	text-decoration: none;
@@ -148,6 +150,7 @@ a:hover {
 }
 
 .site-links a:hover,
+.language-switcher a:hover,
 .section-heading > a:hover,
 .post-nav a:hover {
 	background-size: 100% 1px;
@@ -183,9 +186,9 @@ img {
 }
 
 .site-nav {
-	display: flex;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
 	align-items: center;
-	justify-content: space-between;
 	gap: 24px;
 	width: auto;
 	margin-inline: 28px;
@@ -198,6 +201,7 @@ img {
 	height: 48px;
 	place-items: center;
 	text-decoration: none;
+	justify-self: start;
 }
 
 .site-mark-shape {
@@ -230,6 +234,26 @@ img {
 	gap: 20px;
 	color: var(--muted);
 	font-size: 0.88rem;
+	justify-self: end;
+	white-space: nowrap;
+}
+
+.language-switcher {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	color: var(--muted);
+	font-size: 0.76rem;
+	white-space: nowrap;
+}
+
+.language-switcher a {
+	text-decoration: none;
+}
+
+.language-switcher .is-active {
+	color: var(--ink);
+	font-weight: 500;
 }
 
 .site-links a {
@@ -713,6 +737,28 @@ blockquote {
 	max-width: 700px;
 }
 
+.error-code {
+	margin: 0;
+	font-family: "Lora", Georgia, serif;
+	font-size: clamp(3.5rem, 12vw, 6rem);
+	font-weight: 500;
+	letter-spacing: -0.055em;
+	line-height: 1;
+}
+
+.not-found-copy {
+	max-width: 700px;
+	margin-top: 32px;
+}
+
+.not-found-copy p {
+	margin: 0;
+}
+
+.not-found-copy p + p {
+	margin-top: 24px;
+}
+
 @media (max-width: 600px) {
 	.shell {
 		width: min(100% - 28px, 780px);
@@ -723,12 +769,18 @@ blockquote {
 	}
 
 	.site-nav {
+		gap: 12px;
 		margin-inline: 14px;
 	}
 
 	.site-links {
-		gap: 13px;
+		gap: 10px;
 		font-size: 0.78rem;
+	}
+
+	.language-switcher {
+		gap: 4px;
+		font-size: 0.68rem;
 	}
 
 	.site-main {
@@ -749,8 +801,7 @@ blockquote {
 	}
 
 	.introduction h2,
-	.section-heading h2,
-	.page-heading {
+	.section-heading h2 {
 		font-size: 1.2rem;
 	}
 
@@ -776,7 +827,8 @@ blockquote {
 		font-size: clamp(1.7rem, 8vw, 2.3rem);
 	}
 
-	.archive-heading h1 {
+	.archive-heading h1,
+	.page-heading {
 		font-size: clamp(1.7rem, 8vw, 2.3rem);
 	}
 
@@ -812,6 +864,20 @@ blockquote {
 }
 
 @media (max-width: 380px) {
+	.site-nav {
+		gap: 8px;
+		margin-inline: 10px;
+	}
+
+	.site-links {
+		gap: 8px;
+		font-size: 0.72rem;
+	}
+
+	.language-switcher {
+		font-size: 0.64rem;
+	}
+
 	.site-mark {
 		width: 42px;
 		height: 42px;

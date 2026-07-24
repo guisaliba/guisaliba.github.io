@@ -1,23 +1,46 @@
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign strings = site.data.i18n[lang] -%}
+{%- if lang == "pt-BR" -%}
+  {%- assign home_url = "/pt-br/" -%}
+  {%- assign blog_url = "/pt-br/blog/" -%}
+  {%- assign tags_url = "/pt-br/tags/" -%}
+  {%- assign feed_url = "/pt-br/feed.xml" -%}
+{%- else -%}
+  {%- assign home_url = "/" -%}
+  {%- assign blog_url = "/blog/" -%}
+  {%- assign tags_url = "/tags/" -%}
+  {%- assign feed_url = "/feed.xml" -%}
+{%- endif -%}
 <!doctype html>
-<html lang="en">
+<html lang="{{ strings.locale }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {%- seo -%}
+    {%- assign all_documents = site.pages | concat: site.posts -%}
+    {%- assign translations = all_documents | where: "translation_key", page.translation_key -%}
+    {%- assign english_page = translations | where: "lang", "en" | first -%}
+    {%- assign portuguese_page = translations | where: "lang", "pt-BR" | first -%}
+    {%- if english_page and portuguese_page -%}
+      <link rel="alternate" hreflang="en" href="{{ english_page.url | absolute_url }}">
+      <link rel="alternate" hreflang="pt-BR" href="{{ portuguese_page.url | absolute_url }}">
+      <link rel="alternate" hreflang="x-default" href="{{ english_page.url | absolute_url }}">
+    {%- endif -%}
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-    {%- feed_meta -%}
+    <link rel="alternate" type="application/atom+xml" title="{{ strings.feed.title }}" href="{{ feed_url | absolute_url }}">
   </head>
   <body>
     <header class="site-header">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="site-mark" href="{{ '/' | relative_url }}" aria-label="Guilherme Saliba, home">
+      <nav class="site-nav" aria-label="{{ strings.nav.label }}">
+        <a class="site-mark" href="{{ home_url | relative_url }}" aria-label="Guilherme Saliba, {{ strings.nav.home }}">
           <span class="site-mark-shape" aria-hidden="true"></span>
         </a>
+        {%- include language-switcher.html -%}
         <div class="site-links">
-          <a href="{{ '/' | relative_url }}">home</a>
-          <a href="{{ '/blog/' | relative_url }}">writings</a>
-          <a href="{{ '/tags/' | relative_url }}">tags</a>
+          <a href="{{ home_url | relative_url }}">{{ strings.nav.home }}</a>
+          <a href="{{ blog_url | relative_url }}">{{ strings.nav.writings }}</a>
+          <a href="{{ tags_url | relative_url }}">{{ strings.nav.tags }}</a>
         </div>
       </nav>
     </header>
@@ -27,7 +50,7 @@
     </main>
 
     <footer class="site-footer shell">
-      Copyright &copy; 2026 Guilherme Saliba
+      {{ strings.footer }}
     </footer>
   </body>
 </html>

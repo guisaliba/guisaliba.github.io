@@ -1,7 +1,16 @@
 ---
 layout: default
 title: "404"
+description: Page not found / Página não encontrada.
+lang: en
+translation_key: not-found
 permalink: /404.html
 ---
 
-<p>Sorry, this page doesn't exist. Try the <a href="{{ "/" | relative_url }}">home page</a>, the <a href="{{ "/blog/" | relative_url }}">writing archive</a>, or the <a href="{{ "/tags/" | relative_url }}">tags index</a>.</p>
+<h1 class="error-code">404</h1>
+
+<div class="not-found-copy">
+  <p lang="en">Sorry, this page doesn't exist. Try the <a href="{{ "/" | relative_url }}">home page</a>, the <a href="{{ "/blog/" | relative_url }}">writing archive</a>, or the <a href="{{ "/tags/" | relative_url }}">tags index</a>.</p>
+
+  <p lang="pt-BR">Desculpe, esta página não existe. Tente a <a href="{{ "/pt-br/" | relative_url }}">página inicial</a>, o <a href="{{ "/pt-br/blog/" | relative_url }}">arquivo de textos</a> ou o <a href="{{ "/pt-br/tags/" | relative_url }}">índice de tags</a>.</p>
+</div>

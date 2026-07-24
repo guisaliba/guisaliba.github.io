@@ -1,32 +1,61 @@
 name: Guilherme Saliba
 flag: "🇧🇷"
 age: 24
-traits:
-  - software developer
-  - FOSS lover
-topics:
-  - software
-  - LLMs
-  - open source
-  - computer science
-  - self-awareness
-intro: >-
-  I'm a backend developer, undergraduate student, living in <a href="https://en.wikipedia.org/wiki/Belo_Horizonte" target="_blank" rel="noopener noreferrer">Belo Horizonte, Minas Gerais</a>.
-  Working mostly with .NET and Node.js, but I also have strong background in Python and Go.
-  Lifelong learner  of programming languages and computer science in general.
-  <br>
-  <br>
+content:
+  en:
+    traits:
+      - software developer
+      - FOSS lover
+    topics:
+      - software
+      - LLMs
+      - open source
+      - computer science
+      - self-awareness
+    intro: >-
+      I'm a backend developer, undergraduate student, living in <a href="https://en.wikipedia.org/wiki/Belo_Horizonte" target="_blank" rel="noopener noreferrer">Belo Horizonte, Minas Gerais</a>.
+      Working mostly with .NET and Node.js, but I also have a strong background in Python and Go.
+      Lifelong learner of programming languages and computer science in general.
+      <br>
+      <br>
 
-  I love open source software and I try to contribute to it whenever I can. Member and contributor
-  of <a href="https://heartdevs.com" target="_blank" rel="noopener noreferrer">He4rt Devs</a>, 
-  the largest Brazilian open source community for developers.
+      I love open source software and I try to contribute to it whenever I can. Member and contributor
+      of <a href="https://heartdevs.com" target="_blank" rel="noopener noreferrer">He4rt Devs</a>,
+      the largest Brazilian open source community for developers.
 
-  <br>
-  <br>
+      <br>
+      <br>
 
-  I used to do live streams on my
-  <a href="https://twitch.tv/salibaa" target="_blank" rel="noopener noreferrer">Twitch channel</a>
-  , maybe I come back to it someday.
+      I used to do live streams on my
+      <a href="https://twitch.tv/salibaa" target="_blank" rel="noopener noreferrer">Twitch channel</a>,
+      maybe I come back to it someday.
+  pt-BR:
+    traits:
+      - desenvolvedor de software
+      - fã de código aberto
+    topics:
+      - software
+      - LLMs
+      - código aberto
+      - ciência da computação
+      - autoconhecimento
+    intro: >-
+      Sou desenvolvedor backend, estudante em graduação e morando em <a href="https://pt.wikipedia.org/wiki/Belo_Horizonte" target="_blank" rel="noopener noreferrer">Belo Horizonte, MG</a>.
+      Trabalho principalmente com .NET e Node.js, mas já tive que resolver umas buchas com Python e Go também.
+      Eterno aprendiz de linguagens de programação e ciência da computação em geral.
+      <br>
+      <br>
+
+      Amo software de código aberto e tento contribuir sempre que posso. Sou membro e contribuidor ativo da
+      <a href="https://heartdevs.com" target="_blank" rel="noopener noreferrer">He4rt Devs</a>,
+      a maior comunidade brasileira de desenvolvedores. 100% aberta e gratuita!
+
+      <br>
+      <br>
+
+      Teve uma época que eu fazia lives jogando (não tenho mais esse pique) no meu
+      <a href="https://twitch.tv/salibaa" target="_blank" rel="noopener noreferrer">canal da Twitch</a>.
+      Pode ser que eu volte algum dia com uma pegada nova, quem sabe.
 song:
   artist: Olivia Rodrigo
   title: honeybee
@@ -42,5 +71,6 @@ socials:
     icon: instagram
     url: https://instagram.com/httpsaliba
   - name: Email
+    pt_name: E-mail
     icon: email
     url: mailto:salibagui19@gmail.com

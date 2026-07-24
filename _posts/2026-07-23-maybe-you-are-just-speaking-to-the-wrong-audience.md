@@ -1,6 +1,9 @@
 ---
 title: "Maybe you are just speaking to the wrong audience"
 date: 2026-07-23
+lang: en
+translation_key: wrong-audience
+permalink: /blog/2026/07/23/maybe-you-are-just-speaking-to-the-wrong-audience/
 reading_time: 7
 tags: [self-awareness, communication]
 description: "Sometimes, it's not about changing your message, but about finding the right audience."

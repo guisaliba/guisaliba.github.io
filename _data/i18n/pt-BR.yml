@@ -1,0 +1,35 @@
+lang_name: PT-BR
+locale: pt-BR
+nav:
+  label: Navegação principal
+  home: início
+  writings: textos
+  tags: tags
+profile:
+  country: Brasil
+  age_suffix: " anos"
+  writing_subjects: Assuntos dos textos
+  social_links: Links sociais
+  on_repeat: tocando em loop
+  introduction_heading: Opa, e aí!
+  writings_heading: Textos
+  view_all: ver todos
+archive:
+  title: Textos
+  description: Posts sobre software, minhas experiências, código aberto, IA e o que mais vier por aí.
+  browse_tags: navegar por tag
+tags:
+  title: Tags
+  description_before_code: Filtre os textos por tag. Clique em uma das tags ou escreva tipo assim na URL
+  all: Todas
+  no_results: Não encontramos nenhum texto com esta tag.
+post:
+  tags_label: Tags
+  read: Ler
+  reading_time: min de leitura
+date:
+  months: [Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+footer: Copyright &copy; 2026 Guilherme Saliba
+feed:
+  title: textos de guisaliba
+  description: Minha jornada como engenheiro de software e humano. Anotações, textos e coisas que aprendo pelo caminho.

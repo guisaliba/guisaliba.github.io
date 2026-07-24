@@ -1,0 +1,35 @@
+lang_name: EN
+locale: en
+nav:
+  label: Primary navigation
+  home: home
+  writings: writings
+  tags: tags
+profile:
+  country: Brazil
+  age_suffix: y
+  writing_subjects: Writing subjects
+  social_links: Social links
+  on_repeat: on repeat
+  introduction_heading: Hey there!
+  writings_heading: Writings
+  view_all: view all
+archive:
+  title: Writings
+  description: Essays and notes about software, my own journey, open source, AI, and whatever comes next.
+  browse_tags: browse by tag
+tags:
+  title: Tags
+  description_before_code: Filter posts by tag. Click a chip or share a URL like
+  all: All
+  no_results: No posts with this tag.
+post:
+  tags_label: Tags
+  read: Read
+  reading_time: min read
+date:
+  months: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+footer: Copyright &copy; 2026 Guilherme Saliba
+feed:
+  title: guisaliba writings
+  description: My journey as a software engineer and human. Notes, posts, and things I learn along the way.
