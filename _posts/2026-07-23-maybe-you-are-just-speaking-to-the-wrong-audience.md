@@ -21,7 +21,9 @@ You recognize the feeling before the conversation is even over.
 
 For a while, I thought that feeling meant I was talking too much, or talking about the wrong things. It took me much longer to realize that maybe I was simply talking to the wrong people.
 
-I don't mean "wrong" in the sense that they're bad people. They aren't. Not every conversation belongs everywhere, and not everyone has to be interested in what interests us. That's perfectly normal. What isn't normal is allowing those moments to convince us that our enthusiasm itself is somehow misplaced.
+I don't mean "wrong" in the sense that they're bad people. They aren't. Not every conversation belongs everywhere, and not everyone has to be interested in what interests us. That's perfectly normal.
+
+What isn't normal is allowing those moments to convince us that our enthusiasm itself is somehow misplaced.
 
 ## Caring is cool
 
