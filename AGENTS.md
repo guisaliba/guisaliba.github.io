@@ -2,9 +2,7 @@
 
 ## Stack
 
-Static Jekyll blog with the [`minima`](https://github.com/jekyll/minima) theme, deployed via **GitHub Pages**. Ruby + Bundler for tooling; no Node, no Next.js anymore (`main`/`v1`/`v2` branches keep the old history).
-
-This is the `v3` line — do not look at `src/`, `package.json`, or any Next.js config; those are gone in this branch.
+Static bilingual Jekyll blog with the [`minima`](https://github.com/jekyll/minima) theme, deployed from `main` via **GitHub Pages**. Ruby + Bundler only; old Next.js history remains on `v1`/`v2`.
 
 ## Commands
 
@@ -29,42 +27,45 @@ This is the `v3` line — do not look at `src/`, `package.json`, or any Next.js 
 - Front matter that matters:
   - `title` (string)
   - `date` (YYYY-MM-DD)
+  - `lang` (`en` or `pt-BR`; English is the config default)
+  - `translation_key` (stable identifier shared by the EN/PT-BR pair)
   - `reading_time` (int, **minutes, set manually** — no auto-calculation)
   - `tags` (YAML list, e.g. `tags: [ruby, jekyll]`)
   - `description` (optional, used for SEO meta)
   - `cover_image` (**required**, root-relative asset path; every writing list renders it as a square crop)
-- Defaults: `_config.yml` sets `layout: post`, `reading_time: 1`, `tags: []` for everything under `_posts/`, so a post with no front matter still builds.
+- Defaults: `_config.yml` sets `layout: post`, `lang: en`, `reading_time: 1`, `tags: []` for `_posts/`. Still set `lang` and `translation_key` explicitly on published posts so the language toggle can pair them.
+- Publish translations as two `_posts/` files with the same date and `translation_key`. English keeps `/blog/...`; PT-BR must set a natural translated permalink under `/pt-br/blog/...`. Tags are canonical and **must remain identical across translations**.
 - Images: place files in `assets/images/` and reference with `{{ "/assets/images/NAME" | relative_url }}`. Raw binary files without front matter are copied straight through; **do not** add front matter to image files (it turns them into treated pages and breaks them).
 
 ### Layouts
 
-- `_layouts/default.html` owns the visible shell (square mark nav, Home/Writings/Tags links, centered copyright footer). `_layouts/home.html` owns the home-only profile hero + three recent writings. `blog/index.html` owns the complete `/blog/` archive. `_layouts/post.html` owns article metadata/content + prev/next nav. The `page` layout used by `tags/index.html` and `about.md` is inherited from minima (not in this repo's `_layouts/`, which only ships `default`/`home`/`post`).
-- Editable identity/social/song copy lives in `_data/profile.yml`; don't hardcode it into layouts. Social icons are inline SVG selected by `_includes/social-icon.html` — no icon-library dependency.
+- `_layouts/default.html` owns the bilingual shell and centered `EN / PT-BR` switch. `_layouts/home.html` owns the profile + recent writings; `_layouts/page.html` is local (not inherited from minima); `_layouts/post.html` filters prev/next navigation by language.
+- Shared identity/social/song data and localized profile copy live in `_data/profile.yml`. Shell/UI translations live in `_data/i18n/en.yml` and `_data/i18n/pt-BR.yml`; don't hardcode translated UI strings into layouts. Social icons are inline SVG selected by `_includes/social-icon.html`.
 - Styles are fully custom in `assets/main.scss`; minima is still the theme dependency but its SCSS is not imported. This file compiles to `/assets/main.css`. **Do not** move it to `assets/css/main.scss` because `_layouts/default.html` links `/assets/main.css`.
-- Geist 400/700 are vendored at `assets/fonts/` and loaded with `font-display: swap`. The temporary nav mark is CSS; its matching favicon is `assets/images/favicon.svg`.
+- Geist, Lora, Geist Mono, and Dancing Script are vendored at `assets/fonts/`. The CSS nav mark uses Dancing Script; its matching favicon is `assets/images/favicon.svg`.
 - Post covers live in `assets/images/covers/`. Writing lists render `post.cover_image` at the right as a fixed square with `object-fit: cover`; do not manually create thumbnail variants.
 
 ### Tags page (the only "dynamic" part)
 
-- `tags/index.html` is a hand-authored page (layout `page`) at permalink `/tags/`.
-- Liquid gathers every tag across `site.posts`, dedupes them, and renders filter chips + a full list of post `<li>`s carrying `data-tags="tag1,tag2"`.
+- `tags/index.html` and `pt-br/tags/index.html` include `_includes/tags-index.html`; it filters `site.posts` by `page.lang` before gathering tags and rendering results.
 - An inline `<script>` reads `?tag=` from the URL and shows/hides `<li>`s + highlights the active chip. This is the static-site-friendly substitute for per-tag route pages: GitHub Pages does **not** whitelist `jekyll-archives`, and custom Ruby plugins are forbidden on GH Pages, so generate-then-filter is the correct pattern here.
 - If you add per-tag pages, do it client-side too — never rely on a non-whitelisted plugin.
 
 ## Conventions
 
-- Permalinks: `permalink: /blog/:year/:month/:day/:title/` (for example `/blog/2026/07/22/my-post/`). Don't switch to slug-only without also handling redirects.
+- English permalinks use `/blog/:year/:month/:day/:title/`; Portuguese translations use explicit translated slugs under `/pt-br/blog/...`. Do not change a published permalink without a redirect.
+- English pages stay at root routes; PT-BR counterparts live under `/pt-br/`. Every translatable page needs matching `lang` and `translation_key` front matter so the toggle and `hreflang` links resolve the equivalent page.
+- Lists, tags, feeds, and post navigation must filter `site.posts` by language. `/feed.xml` is English-only and `/pt-br/feed.xml` is PT-BR-only; both are hand-authored Liquid Atom feeds.
 - `_config.yml` excludes `Gemfile`, `Gemfile.lock`, `README.md`, `AGENTS.md`, `vendor`, `node_modules` from the build output, and `include`s `.htaccess`. Keep these as-is.
 - `Gemfile.lock` is gitignored (GitHub Pages builds with its own pinned `github-pages` version regardless; the lock only matters for local dev and tends to diverge across Ruby versions). Do not commit it.
 - Use the `github-pages` gem, not bare `jekyll` — it pins the exact versions GH Pages uses, so "works locally" means "works on deploy."
 
 ## GitHub Pages deploy
 
-- Settings → Pages → Build from branch → `v3` (or `main` once merged) at `(root)`. No Action needed; the classic Jekyll build runs server-side.
-- The first build after switching architecture was the `v3` rebuild; expect a few minutes for the GitHub Pages cache to refresh after the first push.
+- Settings → Pages → Build from branch → `main` at `(root)`. No Action needed; the classic Jekyll build runs server-side.
 
 ## Gotchas
 
 - **Future-dated posts don't render by default.** If a post's front matter `date` is later than the build date, it's skipped unless `future: true` is set in `_config.yml`. Sample posts here are dated around the build time intentionally.
 - Even with an empty `baseurl`, keep using `relative_url` for internal links so custom-domain and future hosting changes remain safe.
-- Wiping `main`/`v1`/`v2` to "clean up" would destroy the user's nostalgia history — leave those branches alone.
+- Wiping `v1`/`v2` to "clean up" would destroy the user's nostalgia history — leave those branches alone.
