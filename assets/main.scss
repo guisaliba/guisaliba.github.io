@@ -367,13 +367,21 @@ img {
 }
 
 .introduction h2,
-.section-heading h2,
+.section-heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
 .page-heading {
-	margin: 0;
-	color: var(--ink);
-	font-size: 1.35rem;
-	font-weight: 500;
-	letter-spacing: -0.025em;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(2rem, 7vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
 }
 
 .introduction p {
@@ -536,7 +544,15 @@ img {
 
 /* Posts and pages */
 .page-header {
-	margin-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.page-header p,
+.page-description {
+  max-width: 620px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 .post-header {
