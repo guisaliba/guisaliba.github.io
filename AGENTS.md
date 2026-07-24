@@ -38,7 +38,7 @@ This is the `v3` line — do not look at `src/`, `package.json`, or any Next.js 
 
 ### Layouts
 
-- `_layouts/default.html` owns the visible shell (square mark nav, Home/Writings/Tags links, centered copyright footer). `_layouts/home.html` owns the home-only profile hero + three recent writings. `blog/index.html` owns the complete `/blog/` archive. `_layouts/post.html` owns article metadata/content + prev/next nav. Only `_layouts/page.html` is inherited from minima.
+- `_layouts/default.html` owns the visible shell (square mark nav, Home/Writings/Tags links, centered copyright footer). `_layouts/home.html` owns the home-only profile hero + three recent writings. `blog/index.html` owns the complete `/blog/` archive. `_layouts/post.html` owns article metadata/content + prev/next nav. The `page` layout used by `tags/index.html` and `about.md` is inherited from minima (not in this repo's `_layouts/`, which only ships `default`/`home`/`post`).
 - Editable identity/social/song copy lives in `_data/profile.yml`; don't hardcode it into layouts. Social icons are inline SVG selected by `_includes/social-icon.html` — no icon-library dependency.
 - Styles are fully custom in `assets/main.scss`; minima is still the theme dependency but its SCSS is not imported. This file compiles to `/assets/main.css`. **Do not** move it to `assets/css/main.scss` because `_layouts/default.html` links `/assets/main.css`.
 - Geist 400/700 are vendored at `assets/fonts/` and loaded with `font-display: swap`. The temporary nav mark is CSS; its matching favicon is `assets/images/favicon.svg`.
@@ -54,7 +54,7 @@ This is the `v3` line — do not look at `src/`, `package.json`, or any Next.js 
 ## Conventions
 
 - Permalinks: `permalink: /blog/:year/:month/:day/:title/` (for example `/blog/2026/07/22/my-post/`). Don't switch to slug-only without also handling redirects.
-- `_config.yml` excludes `Gemfile`, `Gemfile.lock`, `README.md`, `AGENTS.md`, `vendor` from the build output. Keep these excluded.
+- `_config.yml` excludes `Gemfile`, `Gemfile.lock`, `README.md`, `AGENTS.md`, `vendor`, `node_modules` from the build output, and `include`s `.htaccess`. Keep these as-is.
 - `Gemfile.lock` is gitignored (GitHub Pages builds with its own pinned `github-pages` version regardless; the lock only matters for local dev and tends to diverge across Ruby versions). Do not commit it.
 - Use the `github-pages` gem, not bare `jekyll` — it pins the exact versions GH Pages uses, so "works locally" means "works on deploy."
 
