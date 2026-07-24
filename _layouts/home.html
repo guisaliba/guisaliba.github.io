@@ -6,7 +6,7 @@ layout: default
     <h1 id="profile-name">{{ site.data.profile.name }}</h1>
     <p class="profile-line profile-traits">
       <span aria-label="Brazil">{{ site.data.profile.flag }}</span>
-      <span>{{ site.data.profile.age }} years old</span>
+      <span>{{ site.data.profile.age }}y</span>
       {%- for trait in site.data.profile.traits -%}
         <span>{{ trait }}</span>
       {%- endfor -%}
@@ -35,13 +35,13 @@ layout: default
   </section>
 
   <section class="introduction" aria-labelledby="introduction-title">
-    <h2 id="introduction-title">Hello.</h2>
+    <h2 id="introduction-title">Hey there!</h2>
     <p>{{ site.data.profile.intro }}</p>
   </section>
 
   <section class="writings" id="writings" aria-labelledby="writings-title">
     <div class="section-heading">
-      <h2 id="writings-title">Recent writings</h2>
+      <h2 id="writings-title">Writings</h2>
       <a href="{{ '/blog/' | relative_url }}">view all</a>
     </div>
     <ul class="post-list">
