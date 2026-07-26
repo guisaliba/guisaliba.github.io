@@ -16,6 +16,8 @@ cover_image: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audi
 
 O sentimento de que você deveria parar de falar sobre algo, não necessariamente significa que o seu entusiasmo está fora de lugar. Nem toda conversa é destinada a todos os públicos. Então, em vez de se calar, encontre as pessoas e os espaços que abrigariam sua curiosidade. Este blog é a minha tentativa de criar esse lugar.
 
+---
+
 ## Estive pensando bastante nisso ultimamente
 
 Já me vi em situações assim mais vezes do que consigo contar. Você está falando sobre algo de que realmente gosta, algo que vem construindo, aprendendo, lendo ou simplesmente pensando a respeito.

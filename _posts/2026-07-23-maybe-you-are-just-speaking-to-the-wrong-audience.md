@@ -16,6 +16,8 @@ cover_image: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audi
 
 Being made to feel like you should stop talking does not necessarily mean your enthusiasm is misplaced. Not every conversation fits every audience, so instead of making yourself quieter, find the people and spaces where your curiosity is welcome. This blog is my attempt to create one of those spaces.
 
+---
+
 ## I've been thinking a lot about this lately
 
 I've found myself in situations like this more times than I can count. You're talking about something you genuinely enjoy, something you've been building, learning, reading about, or simply thinking about.
