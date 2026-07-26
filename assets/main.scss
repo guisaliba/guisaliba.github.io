@@ -409,11 +409,14 @@ img {
 }
 
 .introduction p {
+	width: 100%;
 	max-width: 680px;
 	margin: 14px 0 0;
 	color: #343330;
 	font-size: 1.02rem;
 	line-height: 1.75;
+	text-align: justify;
+	hyphens: auto;
 }
 
 .section-heading {
@@ -545,7 +548,7 @@ img {
 .post-meta {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 7px 16px;
+	gap: 7px 10px;
 	margin: 13px 0 0;
 	color: var(--faint);
 	font-size: 0.72rem;
@@ -562,8 +565,8 @@ img {
 }
 
 .post-meta > span:not(.post-header-tags)::before {
-	content: "·";
-	margin-right: 16px;
+	content: "•";
+	margin-right: 10px;
 }
 
 /* Posts and pages */
@@ -598,16 +601,25 @@ img {
 }
 
 .post-header-tags::before {
-	content: "·";
+	content: "•";
 	align-self: center;
 	margin-right: 10px;
 	color: var(--faint);
 }
 
 .post-content {
+	width: 100%;
+	max-width: 700px;
 	color: #2c2b28;
 	font-size: 1.02rem;
 	line-height: 1.8;
+}
+
+.post-content p,
+.post-content ul,
+.post-content ol {
+	text-align: justify;
+	hyphens: auto;
 }
 
 .post-content > :first-child {
@@ -843,12 +855,16 @@ blockquote {
 	}
 
 	.post-header-meta {
-		align-items: flex-start;
-		flex-direction: column;
-		gap: 9px;
+		align-items: center;
+		flex-direction: row;
+		gap: 7px 10px;
 	}
 
-	.post-meta > span:not(.post-header-tags)::before,
+	.post-header-tags {
+		flex-basis: 100%;
+		margin-top: 2px;
+	}
+
 	.post-header-tags::before {
 		display: none;
 	}
