@@ -5,14 +5,18 @@ lang: en
 translation_key: wrong-audience
 permalink: /blog/2026/07/23/maybe-you-are-just-speaking-to-the-wrong-audience/
 reading_time: 7
-tags: [self-awareness, communication]
+tags: [self-awareness]
 description: "Sometimes, it's not about changing your message, but about finding the right audience."
 cover_image: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png
 ---
 
 ![Cover art]({{ "/assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png" | relative_url }})
 
-## This thought just kept me awake tonight
+## TL;DR
+
+Being made to feel like you should stop talking does not necessarily mean your enthusiasm is misplaced. Not every conversation fits every audience, so instead of making yourself quieter, find the people and spaces where your curiosity is welcome. This blog is my attempt to create one of those spaces.
+
+## I've been thinking a lot about this lately
 
 I've found myself in situations like this more times than I can count. You're talking about something you genuinely enjoy, something you've been building, learning, reading about, or simply thinking about.
 

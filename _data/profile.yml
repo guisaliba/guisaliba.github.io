@@ -5,7 +5,9 @@ content:
   en:
     traits:
       - software developer
-      - FOSS lover
+      - beginner writer
+      - open source enthusiast
+      - One Piece fan
     topics:
       - software
       - open source
@@ -15,7 +17,7 @@ content:
     intro: >-
       I'm a backend developer, undergraduate student, living in <a href="https://en.wikipedia.org/wiki/Belo_Horizonte" target="_blank" rel="noopener noreferrer">Belo Horizonte, Minas Gerais</a>.
       Working mostly with .NET and Node.js, but I also have a strong background in Python and Go.
-      Lifelong learner of programming languages and computer science in general.
+      Interested in: computer science, technology, astrophysics, geopolitics and history.
       <br>
       <br>
 
@@ -26,14 +28,15 @@ content:
       <br>
       <br>
 
-      I used to do live streams on my
+      I used to do gaming streams on my
       <a href="https://twitch.tv/salibaa" target="_blank" rel="noopener noreferrer">Twitch channel</a>,
-      maybe I come back to it someday.
+      (I don't play games much anymore). Maybe I come back to it someday, with a new approach, who knows.
   pt-BR:
     traits:
       - desenvolvedor de software
       - escritor iniciante
       - entusiasta de código aberto
+      - fã de One Piece
     topics:
       - software
       - código aberto
@@ -43,7 +46,8 @@ content:
     intro: >-
       Sou desenvolvedor backend, estudante em graduação e morando em <a href="https://pt.wikipedia.org/wiki/Belo_Horizonte" target="_blank" rel="noopener noreferrer">Belo Horizonte, MG</a>.
       Trabalho principalmente com .NET e Node.js, mas já tive que resolver umas buchas com Python e Go também.
-      Eterno aprendiz de linguagens de programação e ciência da computação em geral.
+      Tenho interesse em: computação, tecnologia, astrofísica, geopolítica e história.
+
       <br>
       <br>
 
@@ -54,7 +58,7 @@ content:
       <br>
       <br>
 
-      Teve uma época que eu fazia lives jogando (não tenho mais esse pique) no meu
+      Já fui de fazer lives jogando (não tenho mais esse pique) no meu
       <a href="https://twitch.tv/salibaa" target="_blank" rel="noopener noreferrer">canal da Twitch</a>.
       Pode ser que eu volte algum dia com uma pegada nova, quem sabe.
 song:
