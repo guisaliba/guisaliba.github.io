@@ -2,8 +2,8 @@
 
 Static personal blog built with [Jekyll](https://jekyllrb.com) + the
 [`minima`](https://github.com/jekyll/minima) theme, published via [GitHub
-Pages](https://pages.github.com). This is the `v3` line of the repository; the
-`main`, `v1`, and `v2` branches are kept as history.
+Pages](https://pages.github.com). Currently, `main` is the `v3` line of the repository; the
+`v1`, and `v2` branches are kept as history.
 
 ## Preview locally
 
@@ -91,8 +91,7 @@ param + JS instead.)
 
 ## Deploy
 
-Push `v3` (or `main`, once merged) to `guisaliba/guisaliba.github.io` and enable Pages in the repo
-settings: **Settings → Pages → Build from branch → v3 / `(root)`**. GitHub
+Push to `main` and ensure Pages is enabled in the repo, from settings: **Settings → Pages → Build from branch → main / `(root)`**. GitHub
 runs `jekyll build` server-side using its own pinned `github-pages` toolchain
 (same versions our `Gemfile` + `.mise.toml` pin locally), so a passing local
 build is a reliable signal for a passing deploy.
