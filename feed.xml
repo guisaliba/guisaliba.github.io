@@ -13,7 +13,7 @@ lang: en
   <link href="{{ '/' | absolute_url }}" rel="alternate" type="text/html" />
   <id>{{ '/' | absolute_url }}</id>
   <updated>{{ posts.first.date | default: site.time | date_to_xmlschema }}</updated>
-  <author><name>{{ site.author | xml_escape }}</name></author>
+  <author><name>{{ site.author.name | default: site.author | xml_escape }}</name></author>
   {%- for post in posts %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
