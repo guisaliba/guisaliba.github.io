@@ -58,6 +58,9 @@ the site locally.
    tags: [ruby, jekyll]
    description: "Optional SEO description."
    cover_image: /assets/images/covers/my-post.svg
+   image:
+     path: /assets/images/covers/my-post.svg
+     alt: "A short description of the cover image"
    ---
    ```
 
@@ -68,6 +71,11 @@ the site locally.
 render it as a square thumbnail. Cover files live in `assets/images/covers/`;
 the thumbnail uses a centered `object-fit: cover` crop, so landscape images
 work without creating a second thumbnail file.
+
+`image` supplies the social-card and JSON-LD image metadata used by
+`jekyll-seo-tag`. It can reuse the `cover_image` file, but keep both fields:
+the visible writing lists read `cover_image`, while the metadata plugin reads
+`image`.
 
 Posts are generated below `/blog/YYYY/MM/DD/title/`. The complete archive is
 at `/blog/`; the homepage shows the three latest posts.

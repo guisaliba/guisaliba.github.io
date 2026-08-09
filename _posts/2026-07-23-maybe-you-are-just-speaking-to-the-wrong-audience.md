@@ -8,6 +8,9 @@ reading_time: 7
 tags: [self-awareness]
 description: "Sometimes, it's not about changing your message, but about finding the right audience."
 cover_image: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png
+image:
+  path: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png
+  alt: "A person speaking between an uninterested group and an attentive group"
 ---
 
 ![Cover art]({{ "/assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png" | relative_url }})
