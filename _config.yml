@@ -1,6 +1,15 @@
 # Site
 title: guisaliba
-author: Gui Saliba
+author:
+  name: Guilherme Saliba
+  url: https://guisaliba.github.io/about/
+  type: Person
+social:
+  name: Guilherme Saliba
+  links:
+    - https://github.com/guisaliba
+    - https://www.linkedin.com/in/guisaliba
+    - https://instagram.com/httpsaliba
 description: >-
   My journey as a software engineer. Notes, posts, and things I learn along the way.
 lang: en

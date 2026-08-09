@@ -33,6 +33,7 @@ Static bilingual Jekyll blog with the [`minima`](https://github.com/jekyll/minim
   - `tags` (YAML list, e.g. `tags: [ruby, jekyll]`)
   - `description` (optional, used for SEO meta)
   - `cover_image` (**required**, root-relative asset path; every writing list renders it as a square crop)
+  - `image` (**required**, `jekyll-seo-tag` object with a root-relative `path` and localized `alt`; normally reuses the cover file)
 - Defaults: `_config.yml` sets `layout: post`, `lang: en`, `reading_time: 1`, `tags: []` for `_posts/`. Still set `lang` and `translation_key` explicitly on published posts so the language toggle can pair them.
 - Publish translations as two `_posts/` files with the same date and `translation_key`. English keeps `/blog/...`; PT-BR must set a natural translated permalink under `/pt-br/blog/...`. Tags are canonical and **must remain identical across translations**.
 - Images: place files in `assets/images/` and reference with `{{ "/assets/images/NAME" | relative_url }}`. Raw binary files without front matter are copied straight through; **do not** add front matter to image files (it turns them into treated pages and breaks them).
@@ -44,6 +45,7 @@ Static bilingual Jekyll blog with the [`minima`](https://github.com/jekyll/minim
 - Styles are fully custom in `assets/main.scss`; minima is still the theme dependency but its SCSS is not imported. This file compiles to `/assets/main.css`. **Do not** move it to `assets/css/main.scss` because `_layouts/default.html` links `/assets/main.css`.
 - Geist, Lora, Geist Mono, and Dancing Script are vendored at `assets/fonts/`. The CSS nav mark uses Dancing Script; its matching favicon is `assets/images/favicon.svg`.
 - Post covers live in `assets/images/covers/`. Writing lists render `post.cover_image` at the right as a fixed square with `object-fit: cover`; do not manually create thumbnail variants.
+- Keep `cover_image` and `image` in post front matter. The first controls visible writing cards; the second controls social-card and JSON-LD metadata.
 
 ### Tags page (the only "dynamic" part)
 

@@ -8,6 +8,9 @@ reading_time: 7
 tags: [self-awareness]
 description: "Às vezes, não se trata de mudar a sua mensagem, mas de encontrar o público certo."
 cover_image: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png
+image:
+  path: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png
+  alt: "Uma pessoa falando entre um grupo desinteressado e um grupo atento"
 ---
 
 ![Arte de capa]({{ "/assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png" | relative_url }})
