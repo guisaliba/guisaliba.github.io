@@ -21,6 +21,7 @@ permalink: /blog/:year/:month/:day/:title/
 # Whitelisted plugins (auto-enabled by github-pages; listed for clarity).
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Markdown rendering
 markdown: kramdown
