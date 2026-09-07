@@ -31,7 +31,7 @@ As aulas, as anotações, os exercícios que você errou e precisou refazer. Na 
 
 Nos últimos meses, comecei a sentir falta disso. Percebi que, diante de um problema, eu já abria uma conversa com uma IA. Mal tinha parado para pensar e estava descrevendo a situação, perguntando como resolver.
 
-Depois, era só esperar.
+Depois, era só **esperar**.
 
 O problema podia ser resolvido com pouquíssima participação minha. E era justamente dessa participação que eu sentia falta. Das tentativas, das conexões que eu fazia, de finalmente entender por que alguma coisa funcionava. De quebrar a cabeça.
 
@@ -43,13 +43,17 @@ Um caso que me fez perceber isso foi um bug que resolvi recentemente no trabalho
 
 Aquilo me lembrou de um problema antigo.
 
-Em outro emprego, construí scripts em PowerShell para facilitar a vida dos demais desenvolvedores ao configurar módulos do projeto. Aí percebi, que ao rodar o script, apareciam um monte de caracteres esquisitos que sequer existiam no meu teclado. Precisei descobrir o que era codificação de caracteres.
+Em outro emprego, construí scripts em PowerShell para facilitar a vida dos demais desenvolvedores ao configurar módulos do projeto. Aí percebi, que ao rodar o script, apareciam um monte de caracteres esquisitos que sequer existiam no meu teclado.
+
+Precisei não só descobrir mas também aprender o que era codificação de caracteres.
 
 Naquela ocasião, mudar a forma de salvar o script resolveu o problema.
 
 Anos depois, diante daquele bug, pensei: será que é a mesma coisa?
 
-Cheguei a perguntar a uma IA mas a resposta não apontou nessa direção. Eu também tinha deixado uma informação importante de fora: o texto vinha de um arquivo que o servidor precisava abrir e ler. Esse ponto é importante porque da mesma forma que precisamos interpretar bem um problema antes de pensar na solução dele, uma IA também precisa que você descreva bem esse problema para ela.
+Cheguei a perguntar a uma IA mas a resposta não apontou nessa direção. Eu também tinha deixado uma informação importante de fora: o texto vinha de um arquivo que o servidor precisava abrir e ler.
+
+Esse ponto é importante porque da mesma forma que precisamos interpretar bem um problema antes de pensar na solução dele, **uma IA também** precisa que você descreva bem esse problema para ela.
 
 Como ela não me ajudou muito, fui pesquisar e fuçar no código da aplicação. Encontrei o trecho que abria o arquivo e percebi que ele usava uma única codificação para dois tipos de arquivo que precisavam de tratamentos diferentes. Havia informação no próprio arquivo para orientar essa escolha, mas o código não a usava para isso.
 
@@ -71,13 +75,13 @@ Com uma IA, também dá para começar assim. Talvez você ainda não tenha conhe
 
 A partir daí, você tem algo para procurar. Um termo desconhecido vira assunto de pesquisa. Uma possível causa vira algo que você pode testar. Dá para consultar a documentação, experimentar um exemplo pequeno ou tentar explicar a ideia com as próprias palavras e perceber onde ainda falta entendimento.
 
-Perguntar de novo à ferramenta é só uma parte desse trabalho. Uma explicação pode parecer muito clara e ainda estar errada. É preciso procurar algo que você consiga verificar fora da conversa.
+Perguntar de novo à ferramenta é só uma parte do processo. Uma explicação pode parecer muito clara e ainda estar errada. É preciso procurar algo que você consiga **verificar** fora da conversa.
 
 Você não precisa começar sabendo contestar a resposta. Pode começar dizendo: eu ainda não entendi isso.
 
 Já existe um próximo passo aí. E o que você aprender ao dar esse passo pode ser justamente a experiência que vai ajudar você no próximo problema.
 
-**Então volte a fazer essas coisas**. Leia um artigo. Faça anotações. Converse com alguém sobre o problema ou tente explicar em voz alta para um patinho de borracha.
+Então **volte a fazer essas coisas**. Leia um artigo. Faça anotações. Converse com alguém sobre o problema ou tente explicar em voz alta para um patinho de borracha.
 
 Dê a si mesmo tempo para perceber o que entendeu e o que ainda precisa aprender.
 
@@ -85,7 +89,7 @@ Encontrou uma explicação? Pare um pouco nela. Tente escrever com as suas palav
 
 Tenho tentado trazer essas práticas de volta para o meu dia. Quando recorro a uma IA, procuro deixar espaço para investigar também. Às vezes, vou ler uma fonte que ela mencionou. Em outras, acompanho o código ou anoto o que acho que está acontecendo antes de fazer outra pergunta.
 
-Você pode começar com uma dessas ações no problema que está tentando resolver agora. Quando surgir outra dúvida, faça de novo. Aos poucos, você vai criando esse hábito na sua rotina.
+Você pode começar com uma dessas ações no problema que está tentando resolver agora. Quando surgir outra dúvida, faça de novo. Aos poucos, você vai criando esse **hábito** na sua rotina.
 
 Talvez você tenha esquecido, mas os livros continuam aí. Os artigos, a documentação, as pessoas com quem você pode conversar também. Volte a procurar essas coisas. Pergunte, experimente, participe do que você está aprendendo.
 
@@ -95,7 +99,7 @@ Quando comecei a trazer esses hábitos de volta, também comecei a pensar em com
 
 Ainda estou descobrindo. Depois de tanto tempo entregando problemas para uma ferramenta resolver, eu me sentia perdido quando tentava entender como eu aprendia. Precisei prestar atenção no que já tinha funcionado para mim e no que eu queria recuperar.
 
-Eu realmente tinha esquecido, ou desconfigurado, o meu próprio sistema de aprender.
+Eu realmente tinha esquecido, ou **desconfigurado**, o meu próprio sistema de aprender.
 
 Eu leio e assisto a muita coisa. Enquanto leio, tento imaginar o que está sendo explicado. Só que, para organizar aquilo, geralmente preciso escrever. Muitas vezes, na mesma hora, enquanto ainda estou lendo, ouvindo ou assistindo.
 
@@ -105,13 +109,15 @@ O que mais importa nesse processo é conseguir escrever com as minhas palavras. 
 
 A IA tem me ajudado nesses momentos. Posso perguntar sobre um conceito que não conheço ou explorar uma dúvida que surgiu enquanto eu fazia uma anotação. Às vezes, quero ajuda naquele ponto específico para conseguir continuar estudando.
 
-E particularmente, eu escrevi instruções para a ferramenta com base em como gosto de receber explicações e vou ajustando conforme uso. Aliás, eu tenho usado o ChatGPT e os modelos (LLM) da família do GPT, mas isso é gosto pessoal. Escolha a ferramenta e a IA que você quiser.
+E particularmente, eu escrevi instruções para a ferramenta com base em como gosto de receber explicações e vou ajustando conforme uso. Aliás, eu tenho usado o ChatGPT e os modelos (LLM) da família do GPT, mas isso é gosto pessoal.
+
+Escolha a ferramenta e a IA **que você quiser**, e se quiser.
 
 O que procuro é uma explicação com a qual eu consiga trabalhar. Consigo explicar de volta? Consigo escrever uma nota sem copiar a resposta? Em que parte ainda me perco?
 
 Também estou testando um processo em que a IA participa muito mais. Nele, ela assume o papel de professora principal e organiza a sessão de estudo. Eu digo o que estou aprendendo, aonde quero chegar e quanto quero me aprofundar. Estou desenvolvendo uma skill para orientar essas sessões, inclusive quando acompanho uma aula por fora.
 
-Ainda é uma experiência em andamento. Leio sobre os métodos de outras pessoas e testo o que parece fazer sentido para mim. Não tenho um sistema pronto para apresentar, e nem preciso porque o intuito aqui não é "mostrar o meu". Tenho algo que estou construindo e observando enquanto uso.
+Ainda é uma experiência em andamento. Leio sobre os métodos de outras pessoas e testo o que parece fazer sentido para mim. Não tenho um sistema pronto para apresentar, **e nem preciso** porque o intuito aqui não é "mostrar o meu". Tenho algo que estou construindo e observando enquanto uso.
 
 O seu pode ser bem diferente. Talvez você queira uma IA para tirar dúvidas de vez em quando. Talvez queira que ela conduza uma sessão inteira. Talvez você descubra nesse processo que prefere nem usar ela. Sua experiência, suas necessidades e o tempo que você tem também fazem parte dessa escolha.
 
@@ -123,7 +129,7 @@ Mesmo quando a ferramenta organiza a aula, ainda cabe a você entender as ideias
 
 Volto àquela questão de matemática na escola. À satisfação de chegar à resposta e perceber que eu tinha conseguido usar o que vinha aprendendo.
 
-É essa sensação que quero continuar encontrando enquanto aprendo com IA. Quero entender como cheguei a uma resposta.
+É essa sensação que quero continuar encontrando enquanto aprendo com IA. Quero **entender como** cheguei a uma resposta.
 
 Ainda estou descobrindo como fazer isso. Posso começar pela próxima dúvida, pela próxima anotação, por mais uma tentativa de explicar com as minhas palavras.
 
@@ -133,4 +139,4 @@ Talvez esse aprendizado volte a me ajudar anos depois, diante de um problema que
 
 > “Você não consegue conectar os pontos olhando para a frente. Só consegue conectá-los olhando para trás.”
 >
-> — Steve Jobs, [discurso de formatura em Stanford, 2005](https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says). Tradução do original em inglês.
+> — Steve Jobs, [discurso de formatura em Stanford, 2005](https://www.youtube.com/watch?v=UF8uR6Z6KLc). Tradução do original em inglês.
