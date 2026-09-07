@@ -13,6 +13,8 @@ image:
   alt: "A young man writing in a notebook beside books and a laptop displaying an AI chat, with small stars above him."
 ---
 
+![Cover art]({{ "/assets/images/covers/dont-outsource-your-learning.png" | relative_url }})
+
 ## TL;DR
 
 I noticed that I was handing AI opportunities to learn along with the problems I wanted it to solve. Returning to reading, investigating, and writing in my own words has helped me take an active part again. I am still finding where AI fits in that process. It can answer a question or guide a whole study session, but I want to understand and apply what I learn.
