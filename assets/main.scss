@@ -72,6 +72,8 @@
 	--muted: #716f69;
 	--faint: #9b9890;
 	--line: #d9d6ce;
+	--image-border: #d9d6ce;
+	--thumbnail-border: transparent;
 	--soft: #ece9e2;
 	--spotify: #1db954;
 	--intro-text: #343330;
@@ -88,6 +90,8 @@
 	--muted: #b3b3ae;
 	--faint: #a1a19b;
 	--line: #41413c;
+	--image-border: #b3b3ae;
+	--thumbnail-border: #b3b3ae;
 	--soft: #292927;
 	--intro-text: #dededb;
 	--body-text: #dededb;
@@ -521,11 +525,21 @@ img {
 }
 
 .writing-cover {
+	position: relative;
 	display: block;
 	width: 124px;
 	aspect-ratio: 1;
 	overflow: hidden;
 	background: var(--soft);
+}
+
+/* Keep the frame above the image during its hover zoom, without resizing it. */
+.writing-cover::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border: 1px solid var(--thumbnail-border);
+	pointer-events: none;
 }
 
 .writing-cover img {
@@ -737,7 +751,7 @@ img {
 	width: auto;
 	max-height: 620px;
 	margin: 2em auto;
-	border: 1px solid var(--line);
+	border: 1px solid var(--image-border);
 }
 
 code,
