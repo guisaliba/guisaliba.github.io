@@ -1,5 +1,8 @@
 lang_name: PT-BR
 locale: pt-BR
+theme:
+  switch_to_dark: Ativar tema escuro
+  switch_to_light: Ativar tema claro
 nav:
   label: Navegação principal
   home: início

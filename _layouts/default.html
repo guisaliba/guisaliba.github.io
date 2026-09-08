@@ -12,10 +12,11 @@
   {%- assign feed_url = "/feed.xml" -%}
 {%- endif -%}
 <!doctype html>
-<html lang="{{ strings.locale }}">
+<html lang="{{ strings.locale }}" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>{% include theme-init.js %}</script>
     {%- seo -%}
     {%- assign all_documents = site.pages | concat: site.posts -%}
     {%- assign translations = all_documents | where: "translation_key", page.translation_key -%}
@@ -28,6 +29,7 @@
     {%- endif -%}
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <script src="{{ '/assets/theme.js' | relative_url }}" defer></script>
     <link rel="alternate" type="application/atom+xml" title="{{ strings.feed.title }}" href="{{ feed_url | absolute_url }}">
   </head>
   <body>
@@ -36,7 +38,10 @@
         <a class="site-mark" href="{{ home_url | relative_url }}" aria-label="Guilherme Saliba, {{ strings.nav.home }}">
           <span class="site-mark-shape" aria-hidden="true"></span>
         </a>
-        {%- include language-switcher.html -%}
+        <div class="site-preferences">
+          {%- include language-switcher.html -%}
+          {%- include theme-switcher.html -%}
+        </div>
         <div class="site-links">
           <a href="{{ home_url | relative_url }}">{{ strings.nav.home }}</a>
           <a href="{{ blog_url | relative_url }}">{{ strings.nav.writings }}</a>

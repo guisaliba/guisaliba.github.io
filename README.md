@@ -99,9 +99,34 @@ param + JS instead.)
 
 ## Deploy
 
+Pull requests run the `Build preview` workflow with Ruby 3.3.4 and the
+`github-pages` gem. Download its `site-preview` artifact to inspect the
+generated pages. This workflow does not publish to GitHub Pages.
+
 Push to `main` and ensure Pages is enabled in the repo, from settings: **Settings → Pages → Build from branch → main / `(root)`**. GitHub
 runs `jekyll build` server-side using its own pinned `github-pages` toolchain
 (same versions our `Gemfile` + `.mise.toml` pin locally), so a passing local
 build is a reliable signal for a passing deploy.
 
 See [`AGENTS.md`](./AGENTS.md) for the agent-facing cheat sheet.
+
+## Light and dark colors
+
+The cream theme is the default, regardless of the device theme. The sun or
+moon button beside the language switch shows the current theme. Select it
+to change themes. Its accessible label and tooltip describe the next action
+in the page language.
+
+Jekyll builds the shared button from `_includes/theme-switcher.html`. Both
+color sets are CSS custom properties in `assets/main.scss`. The dark
+background is `#191918`, the original main text color. Dark text uses neutral
+off-white colors: `#e8e8e6` for headings and `#dededb` for body text.
+
+`assets/theme.js` changes the `data-theme` attribute on `<html>` and saves
+the choice in `localStorage` under `theme`. The choice applies across pages,
+languages, and visits in the same browser. `_includes/theme-init.js` reads
+it before the stylesheet loads to prevent a flash of the light theme.
+
+If browser storage is unavailable, the button still works on the current
+page. Without JavaScript, the site uses the light theme and hides the button.
+The icons are inline SVG; no icon package or new Jekyll plugin is required.

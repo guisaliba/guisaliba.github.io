@@ -9,7 +9,7 @@ Static bilingual Jekyll blog with the [`minima`](https://github.com/jekyll/minim
 - `bundle install` — first-time setup; installs the `github-pages` gem (pins the whole toolchain — jekyll 3.10, liquid 4.0.4, minima 2.5.1 — to match production).
 - `bundle exec jekyll serve` — local dev server at `http://127.0.0.1:4000/` (no path prefix; this is a GitHub Pages user site).
 - `bundle exec jekyll build` — full production build into `_site/`.
-- There is no lint, no test, no typecheck. Verification = does `bundle exec jekyll build` succeed and do the local pages render.
+- There is no lint, no test, no typecheck. Verification = does `bundle exec jekyll build` succeed and do the local pages render. Pull requests also run `.github/workflows/preview.yml`, which builds with Ruby 3.3.4 and uploads `_site/` as the `site-preview` artifact without deploying.
 
 ## Ruby toolchain
 
@@ -40,7 +40,8 @@ Static bilingual Jekyll blog with the [`minima`](https://github.com/jekyll/minim
 
 ### Layouts
 
-- `_layouts/default.html` owns the bilingual shell and centered `EN / PT-BR` switch. `_layouts/home.html` owns the profile + recent writings; `_layouts/page.html` is local (not inherited from minima); `_layouts/post.html` filters prev/next navigation by language.
+- `_layouts/default.html` owns the bilingual shell and language/theme controls. `_layouts/home.html` owns the profile + recent writings; `_layouts/page.html` is local (not inherited from minima); `_layouts/post.html` filters prev/next navigation by language.
+- Theme colors use CSS custom properties in `assets/main.scss`. Light is the default. `_includes/theme-init.js` restores the saved choice before CSS loads; `assets/theme.js` handles the button and saves `localStorage.theme`. Keep UI labels in the i18n data files and icons in `_includes/theme-switcher.html`.
 - Shared identity/social/song data and localized profile copy live in `_data/profile.yml`. Shell/UI translations live in `_data/i18n/en.yml` and `_data/i18n/pt-BR.yml`; don't hardcode translated UI strings into layouts. Social icons are inline SVG selected by `_includes/social-icon.html`.
 - Styles are fully custom in `assets/main.scss`; minima is still the theme dependency but its SCSS is not imported. This file compiles to `/assets/main.css`. **Do not** move it to `assets/css/main.scss` because `_layouts/default.html` links `/assets/main.css`.
 - Geist, Lora, Geist Mono, and Dancing Script are vendored at `assets/fonts/`. The CSS nav mark uses Dancing Script; its matching favicon is `assets/images/favicon.svg`.
