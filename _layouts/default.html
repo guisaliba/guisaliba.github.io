@@ -28,8 +28,8 @@
       <link rel="alternate" hreflang="x-default" href="{{ english_page.url | absolute_url }}">
     {%- endif -%}
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-    <script src="{{ '/assets/theme.js' | relative_url }}" defer></script>
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <script src="{{ '/assets/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
     <link rel="alternate" type="application/atom+xml" title="{{ strings.feed.title }}" href="{{ feed_url | absolute_url }}">
   </head>
   <body>
