@@ -2,6 +2,7 @@
   const root = document.documentElement;
   const button = document.querySelector('.theme-switcher');
   if (!button) return;
+  let transitionTimer;
 
   function applyTheme(theme) {
     root.dataset.theme = theme;
@@ -12,7 +13,11 @@
 
   button.addEventListener('click', () => {
     const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    // Fade only an explicit theme change, never the initial page load.
+    clearTimeout(transitionTimer);
+    root.classList.add('theme-changing');
     applyTheme(theme);
+    transitionTimer = setTimeout(() => root.classList.remove('theme-changing'), 300);
     try {
       localStorage.setItem('theme', theme);
     } catch (error) {

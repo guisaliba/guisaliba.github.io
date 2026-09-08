@@ -1012,12 +1012,25 @@ blockquote {
 	}
 }
 
+/* Apply the same short fade to text, surfaces, icons, and borders. */
+html.theme-changing *,
+html.theme-changing *::before,
+html.theme-changing *::after {
+	transition:
+		background-color 240ms ease,
+		color 240ms ease,
+		border-color 240ms ease,
+		text-decoration-color 240ms ease;
+}
+
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
 	}
 
-	* {
+	*,
+	*::before,
+	*::after {
 		transition: none !important;
 	}
 }

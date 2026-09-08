@@ -127,6 +127,9 @@ the choice in `localStorage` under `theme`. The choice applies across pages,
 languages, and visits in the same browser. `_includes/theme-init.js` reads
 it before the stylesheet loads to prevent a flash of the light theme.
 
+Selecting a theme fades the page colors over 240 milliseconds. The fade runs
+only when the button is used and is disabled by `prefers-reduced-motion`.
+
 If browser storage is unavailable, the button still works on the current
 page. Without JavaScript, the site uses the light theme and hides the button.
 The icons are inline SVG; no icon package or new Jekyll plugin is required.
