@@ -7,13 +7,15 @@ permalink: /pt-br/blog/2026/07/23/talvez-voce-so-esteja-falando-com-o-publico-er
 reading_time: 7
 tags: [self-awareness]
 description: "Às vezes, não se trata de mudar a sua mensagem, mas de encontrar o público certo."
-cover_image: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png
+cover_image: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.jpg
 image:
-  path: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png
-  alt: "Uma pessoa falando entre um grupo desinteressado e um grupo atento"
+  path: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.jpg
+  alt: "Fileiras de assentos vermelhos em um teatro vazio"
 ---
 
-![Arte de capa]({{ "/assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png" | relative_url }})
+<!-- Foto de capa por Hugo Xie no Unsplash: https://unsplash.com/photos/empty-theater-seats-await-an-audience-h_dERD8vduw -->
+
+![Arte de capa]({{ "/assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.jpg" | relative_url }})
 
 ## TL;DR
 
