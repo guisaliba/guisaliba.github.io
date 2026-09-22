@@ -7,13 +7,15 @@ permalink: /blog/2026/09/07/dont-outsource-your-learning/
 reading_time: 10
 tags: [AI, productivity, self-awareness]
 description: "How I am finding my way back to active learning and giving AI a place in the process, while keeping the satisfaction of working things out."
-cover_image: /assets/images/covers/dont-outsource-your-learning.png
+cover_image: /assets/images/covers/dont-outsource-your-learning.jpg
 image:
-  path: /assets/images/covers/dont-outsource-your-learning.png
-  alt: "A young man writing in a notebook beside books and a laptop displaying an AI chat, with small stars above him."
+  path: /assets/images/covers/dont-outsource-your-learning.jpg
+  alt: "The Admont Abbey Library: an ornate historic hall with tall bookcases and a painted ceiling."
 ---
 
-![Cover art]({{ "/assets/images/covers/dont-outsource-your-learning.png" | relative_url }})
+<!-- Cover photo by Carrie Borden on Unsplash: https://unsplash.com/photos/a-large-ornate-room-with-a-large-ceiling-and-many-bookshelves-aDD4TENs_Rw -->
+
+![Cover art]({{ "/assets/images/covers/dont-outsource-your-learning.jpg" | relative_url }})
 
 ## TL;DR
 
