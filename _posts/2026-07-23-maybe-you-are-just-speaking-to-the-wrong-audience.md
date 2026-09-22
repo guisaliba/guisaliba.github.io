@@ -7,13 +7,15 @@ permalink: /blog/2026/07/23/maybe-you-are-just-speaking-to-the-wrong-audience/
 reading_time: 7
 tags: [self-awareness]
 description: "Sometimes, it's not about changing your message, but about finding the right audience."
-cover_image: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png
+cover_image: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.jpg
 image:
-  path: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png
-  alt: "A person speaking between an uninterested group and an attentive group"
+  path: /assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.jpg
+  alt: "Empty rows of red velvet theater seats in an ornate auditorium"
 ---
 
-![Cover art]({{ "/assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.png" | relative_url }})
+<!-- Cover photo by Hugo Xie on Unsplash: https://unsplash.com/photos/empty-theater-seats-await-an-audience-h_dERD8vduw -->
+
+![Cover art]({{ "/assets/images/covers/maybe-you-are-just-speaking-to-the-wrong-audience.jpg" | relative_url }})
 
 ## TL;DR
 
