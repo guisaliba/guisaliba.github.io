@@ -7,13 +7,15 @@ permalink: /pt-br/blog/2026/09/07/nao-terceirize-seu-aprendizado/
 reading_time: 10
 tags: [AI, productivity, self-awareness]
 description: "Sobre voltar a participar do que aprendo e descobrir onde a IA cabe nesse processo, sem perder a satisfação de entender por conta própria."
-cover_image: /assets/images/covers/dont-outsource-your-learning.png
+cover_image: /assets/images/covers/dont-outsource-your-learning.jpg
 image:
-  path: /assets/images/covers/dont-outsource-your-learning.png
-  alt: "Ilustração de um jovem escrevendo em um caderno, ao lado de livros e um notebook com uma conversa de IA na tela. Pequenas estrelas aparecem acima dele."
+  path: /assets/images/covers/dont-outsource-your-learning.jpg
+  alt: "Interior de uma biblioteca histórica ornamentada, com estantes e teto pintado"
 ---
 
-![Arte de capa]({{ "/assets/images/covers/dont-outsource-your-learning.png" | relative_url }})
+<!-- Foto de capa por Carrie Borden no Unsplash: https://unsplash.com/photos/a-large-ornate-room-with-a-large-ceiling-and-many-bookshelves-aDD4TENs_Rw -->
+
+![Arte de capa]({{ "/assets/images/covers/dont-outsource-your-learning.jpg" | relative_url }})
 
 ## TL;DR
 
