@@ -21,6 +21,8 @@ image:
 
 I noticed that I was handing AI opportunities to learn along with the problems I wanted it to solve. Returning to reading, investigating, and writing in my own words has helped me take an active part again. I am still finding where AI fits in that process. It can answer a question or guide a whole study session, but I want to understand and apply what I learn.
 
+---
+
 ## As it was
 
 Think back to solving a maths problem at school. You read the question, tried to understand it, and looked for a way to begin. You used what you had learned. Sometimes you got stuck and tried again.
